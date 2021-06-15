@@ -140,11 +140,11 @@ extern MM_Environment mmEnv;
     /* Definitions of global variables */                                       \
     MM_Environment mmEnv;                                                       \
                                                                                 \
+    extern void MM_Init(void);                                                  \
+                                                                                \
     void                                                                        \
     MM_InitWrapper(MM_Environment *env, unsigned int envSize)                   \
     {                                                                           \
-        extern void MM_Init(void);                                              \
-                                                                                \
         char **envPtr = (char **)env;                                           \
         char **mmPtr =  (char **)(&mmEnv);                                      \
         char **envEnd = (char **)((char *)envPtr + envSize);                    \
